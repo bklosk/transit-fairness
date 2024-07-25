@@ -1,4 +1,4 @@
-# transit-fairness
+# Transit Algorithm Fairness Platform
 react/material UI/mapbox front end for Shuman et al. 2024\
 
 react components live under /frontend\
