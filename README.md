@@ -1,4 +1,4 @@
-# Transit Algorithm Fairness Platform
+# Transit Fairness Platform
 react/material UI/mapbox front end for Shuman et al. 2024\
 
 react components live under /frontend\
@@ -9,4 +9,4 @@ TODO:
 -setup dev server (vite is what I'm used to)\
 -build skeleton app\
 -figure out mapbox integration\
-    -load nb data into mapbox polygons\
+    -load nb data into mapbox polygons
