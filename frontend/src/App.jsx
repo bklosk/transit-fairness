@@ -1,10 +1,11 @@
-import './App.css';
 import { createRoot } from "react-dom/client";
 
 function App() {
+  console.log('hmmm');
   return (
     <div className="App">
-      <p>yo whaddup</p>
+      <h1>YO WHADDUP this a websiteee
+      </h1>
     </div>
   );
 }
