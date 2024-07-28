@@ -1,8 +1,8 @@
 # Transit Fairness Platform
-react/material UI/mapbox front end for Shuman et al. 2024\
+react/material UI/mapbox front end for Shuman et al. 2024
 
 react components live under /frontend\
-data lives under /frontend/src/assets, can move elsewhere if needed\
+data lives under /frontend/src/assets, can move elsewhere if needed
 
 TODO:
 -determine hosting (digitalocean?)\
