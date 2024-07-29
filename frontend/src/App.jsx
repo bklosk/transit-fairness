@@ -34,7 +34,7 @@ function App() {
   // this is what will actually be rendered by React's DOM
   return (
     <div className="App">
-      <h1 class="underline"> Public Transit Fairness Platform
+      <h1 class=" text-3xl underline"> Public Transit Fairness Platform
       </h1>
       <div>
         <div ref={mapContainer} className="map-container" />
