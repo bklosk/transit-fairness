@@ -5,6 +5,8 @@ export default defineConfig({
   plugins: [react()],
   root: "src",
   server: {
-    host: '127.0.0.1'
-  }
+    host: '127.0.0.1',
+    hmr:{
+      overlay:false
+  }},
 });

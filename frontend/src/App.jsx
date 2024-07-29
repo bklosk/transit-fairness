@@ -16,8 +16,8 @@ function App() {
   // these are the boilerplate params provided by Mapbox-gl
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
+  const [lat, setLat] = useState(38.889805);
+  const [lng, setLng] = useState(-77.009056);
   const [zoom, setZoom] = useState(9);
 
   // Effect hook (side effects in function components) that initializes the map
