@@ -3,6 +3,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import './style.css' //TODO: implement Tailwind so I can make stuff pretty
+// import './assets/dc.geojson'
 
 // THIS IS THE DEFAULT PUBLIC TOKEN
 // I may be dumb, but I'm not stupid   -ben
@@ -18,7 +19,7 @@ function App() {
   const map = useRef(null);
   const [lat, setLat] = useState(38.889805);
   const [lng, setLng] = useState(-77.009056);
-  const [zoom, setZoom] = useState(9);
+  const [zoom, setZoom] = useState(13);
 
   // Effect hook (side effects in function components) that initializes the map
   useEffect(() => {
@@ -30,21 +31,16 @@ function App() {
       zoom: zoom  // zoom
     });
     map.current.on('load', () => {
-      map.current.addSource('earthquakes', {
-        type: 'geojson',
+      map.current.addSource('data-id', {
+        type: 'vector',
         // Use a URL for the value for the data property.
-        data: 'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson'
+        data: 'mapbox://styles/benklosky/clzawycdz00jv01qp7k6607w4'
         });
       map.current.addLayer({
-        'id': 'earthquakes-layer',
-        'type': 'circle',
-        'source': 'earthquakes',
-        'paint': {
-            'circle-radius': 4,
-            'circle-stroke-width': 2,
-            'circle-color': 'red',
-            'circle-stroke-color': 'white'
-        }
+        'id': 'data-id',
+        'type': 'fill',
+        'source': 'data-id',
+        'source-layer': 'dc-bi0du3',
       });
     });
   });
@@ -52,7 +48,7 @@ function App() {
   // this is what will actually be rendered by React's DOM
   return (
     <div className="App">
-      <h1 className="font-serif text-3xl underline"> Public Transit Fairness Platform
+      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl"> Public Transit Fairness - Platform Test
       </h1>
       <div>
         <div ref={mapContainer} className="map-container" />
